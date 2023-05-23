@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+    /* 함수 
+    - 한 가지 기능을 처리하기 위해 작성된 단일코드
+    - 함수를 값으로 처리 --> 전달인자로 값을 전달하거나 반환할 수 있음
+    - 종류: 선언함수, 표현함수
+    - Named function, Anonymous function
+    - 반환되는 값을 가질 수 있으며 1개의 값만 반환한다. 
+    */
+
+   // hoisting: 선언적 함수는 호이스팅이 됨 (대입문은 호이스팅이 안됨)
+   // 선언문만 가능함! (대입, 초기화는 안됨)
+    console.log(num); 
+    var num; // 선언: 선언문만 호이스팅되서 위로 올라감
+    num = 6; // 초기화: 초기화는 올라가지 못함
+
+    console.log(num1);
+    var num1 =6; // 선언 초기화 동시에 하면 안됨
+
+    // 함수의 선언: 함수를 선언해서 사용하면 호출문이 선언문보다 위에 있어도 됨
+    function add(a, b) {
+        return a + b;
+    }
+
+    // 호출
+    let result1 = add(10, 20);
+    console.log('결과: ' + result1);
+
+    // 익명함수: 대입문은 실행문이라 함수가 먼저 나와야 함
+    let minus = function(a, b) {
+        return a - b;
+    }
+
+    let result2 = minus(20, 15);
+    console.log('결과: ' + result2);
+
+    
+
+    </script>
+
+</body>
+
+</html>

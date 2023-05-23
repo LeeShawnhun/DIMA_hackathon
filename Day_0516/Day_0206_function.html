@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        margin: 0 auto;
+        width: 500px;
+        height: 500px;
+        text-align: center;
+        border: 1px solid #ccc;
+    }
+
+    #btn {
+        margin-top: 50px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <input type="button" id="startbtn" value="Start">
+        <input type="button" id="stopbtn" value="Stop">
+        <h2 id="now"></h2>
+    </div>
+    <script>
+        let start;
+        // 함수를 호출할때는 실행하면 안됨: () 붙이면 안됨!
+
+        document.getElementById("startbtn").addEventListener('click', function () {
+            start = setInterval(printTime, 1000);
+        });
+
+        document.getElementById("stopbtn").addEventListener('click', function () {
+            clearInterval(start);
+            
+        });
+
+        function printTime() {
+            let date = new Date();
+            let hour = date.getHours();
+            let min = date.getMinutes();
+            let sec = date.getSeconds();
+
+            let time = document.getElementById("now");
+            time.innerText = `${hour}시 ${min}분 ${sec}초`;
+        };
+    </script>
+
+</body>
+
+</html>

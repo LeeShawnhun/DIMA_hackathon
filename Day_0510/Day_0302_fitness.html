@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness</title>
+    <style>
+        div.container {
+            width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+    
+        table {
+            width: 650px;
+        }
+    
+        table,
+        td,
+        th {
+            border: 1px dotted gray;
+            /* 셀 사이의 여백 제거*/
+            border-collapse: collapse;
+        }
+    
+        table th.title {
+            width: 200px;
+            background-color: lightblue;
+    
+        }
+    
+        table td {
+            padding-left: 10px;
+        }
+
+        th,
+        td {
+            height: 50px;
+        }
+
+        input[type=text], [type=number] {
+            margin-left: -120px;
+            width: 300px;
+            height: 25px;
+        }
+
+        input#choice {
+            text-align: center;
+        }
+    </style>
+
+    
+</head>
+
+
+<body>
+    <div class="container">
+        <h2>Fitness</h2>
+        <form action="" method="get">
+            <table>
+                <tbody>
+                    <tr>
+                        <th class="title">아이디</th>
+                        <td>
+                            <input type="text" name="id" id="id" placeholder="여기에 아이디 입력" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="title">이름</th>
+                        <td>
+                            <input type="text" name="name" id="name" placeholder="여기에 이름 입력" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="title">키</th>
+                        <td>
+                            <input type="number" name="height" id="height" placeholder="여기에 키(cm) 입력" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="title">몸무게</th>
+                        <td>
+                            <input type="number" name="weight" id="weight" placeholder="여기에 몸무게(kg) 입력" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="title">BMI</th>
+                        <td>
+                            <input type="number" name="BMI" id="BMI" readonly>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan="2" id="choice">
+                            <input type="button" value="계산하기" id="btn">
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </form>
+    </div>
+
+    <!-- 화면에 표시되기 전에 스크립트 내용이 먼저 실행될 수 있음-->
+        <script>
+            /* 변수선언 */
+            let btn = document.getElementById("btn");
+            btn.addEventListener('click', function () {
+                let id = document.getElementById("id").value;
+                let name = document.getElementById("name").value;
+                let height = document.getElementById("height").value;
+                let weight = document.getElementById("weight").value;
+                let bmi = weight / (height * height * 0.0001);
+               
+                document.getElementById("BMI").value = bmi;
+                /* 콘솔창에서만 보임*/
+                console.log(id);
+                console.log(name);
+                
+            });
+
+        </script>
+
+</body>
+
+</html>

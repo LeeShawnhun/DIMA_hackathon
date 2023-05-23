@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- JS가 head에 있으면 DOM이 완도되기 전에 실행될 수 있음-->
+    <script src="./script/append.js"> </script>
+
+</head>
+
+<body>
+    <h2>회원 등록</h2>
+    <div>
+        <label for="username">이름:
+            <input type="text" id="username" placeholder="여기에 이름 입력">
+        </label>
+        <label for="age">나이:
+            <input type="text" id="age" placeholder="여기에 나이 입력">
+        </label>
+        <input type="button" id="reg" value="추가">
+    </div>
+    <hr>
+    <h2>추가된 결과</h2>
+    <p id='target'></p>
+
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!-- 현재 문서가 HTML5 문서임을 명시-->
+<!DOCTYPE html>
+
+<!-- 
+    html 웹 문서의 시작을 알림
+    lang: 문서에서 사용할 언어/브라우저의 언어 자동 번역 기능
+    "ko" => 한국어
+-->
+<hmtl lang="ko">
+    <!-- 문서의 메타 데이터 정의-->
+    <head>
+        <!-- 문서의 인코딩 방식 지정: meta 태그는 끝태그가 없음-->
+        <meta charset="UTF-8">
+
+        <!-- 문서의 제목 지정-->
+        <title> 문서의 제목 지정</title>
+
+        <!-- 내부 CSS 설정할 때 사용-->
+        <style>
+            /* CSS 주석*/
+            h1{
+                color:blue;
+            }
+        </style>
+
+        <!-- JS를 설정할 때 사용-->
+        <script></script>
+
+    </head>
+
+    <!-- 실제로 화면에 표현되는 부분-->
+    <body>
+        <h1 id="test"> Web Front end</h1>
+        <!-- JS를 설정할 때 사용-->
+        <script>
+            document.getElementById("test").addEventListener('click', function () {
+                alert("클릭했니?");
+            })
+        </script>
+
+
+    </body>
+
+<!-- 웹 문서의 끝-->
+</hmtl>

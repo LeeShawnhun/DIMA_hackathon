@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .wrapper {
+        width: 500px;
+        height: 50px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    ul {
+        /* 리스트 머리 태그 제거*/
+        list-style-type: none;
+        padding: 0;
+    }
+
+    ul>li {
+        /* 가로로 정렬*/
+        float: left;
+        width: 25%;
+        text-align: center;
+    }
+
+    a {
+        display: inline-block;
+        text-decoration: none;
+        width: 100%;
+        padding-top: 12px;
+        height: 30px;
+        background-color: #ccc;
+    }
+
+    a:hover {
+        color: white;
+        background-color: blueviolet;
+    }
+
+    img {
+        margin-top: 50px;
+    }
+</style>
+
+<body>
+
+    <div class="wrapper">
+        <h2>
+            <input type="text" id="data">
+            <input type="button" id="btn" value="바꿔!">
+
+        </h2>
+        <ul>
+            <li><a href="#">1번 그림</a></li>
+            <li><a href="#">2번 그림</a></li>
+            <li><a href="#">3번 그림</a></li>
+            <li><a href="#">4번 그림</a></li>
+        </ul>
+        <img src="" alt="">
+    </div>
+
+    <script>
+        let imgName = ["images/1.png", "images/2.png", "images/3.png", "images/4.png"];
+
+        document.getElementById("btn").addEventListener('click', function () {
+            let temp = document.getElementById("data").value;
+            document.getElementsByTagName("img")[0].setAttribute("src", temp);
+        });
+
+        let anchor = document.getElementsByTagName("a");
+        for (let item of anchor) {
+            item.addEventListener('click', change);
+        }
+
+        function change() {
+            let image = document.getElementsByTagName("img")[0];
+
+            // this: 함수를 호출한 장본인
+            switch (this.innerText) {
+                case "1번 그림": image.setAttribute("src", imgName[0]); break;
+                case "2번 그림": image.setAttribute("src", imgName[1]); break;
+                case "3번 그림": image.setAttribute("src", imgName[2]); break;
+                case "4번 그림": image.setAttribute("src", imgName[3]); break;
+
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>anchor 태그</title>
+    <link rel="stylesheet" href="CSS/default.css">
+
+</head>
+
+<body>
+    <!-- anchor 태그-->
+    <h2>Anchor 태그</h2>
+    <!-- 절대 경로
+        title: 커서를 올렸을 때 뜨는 문구
+        target: 창을 열 옵션 설정
+        href: id값으로 위치 설정 가능
+            이동할 때는 #id값 형식으로 지정
+    -->
+    <a id="top"></a>
+    <a href="#symbol">스페이드로 이동</a><br>
+    <a href="http://maplestory.nexon.com" title="메이플 ㄱ?">메이플스토리</a><br>
+    <a href="http://maplestory.nexon.com" target="_blank">메이플스토리(새창열기)</a><br>
+    <a href="http://maplestory.nexon.com" target="_self">메이플스토리(현재창열기)</a><br>
+    <!-- 창 이름 지정해서 열기
+        같은 이름의 창에서 새롭게 열림
+    -->
+    <a href="http://maplestory.nexon.com" target="anything">메이플스토리(임의로 열기)</a><br>
+    <a href="http://df.nexon.com" target="anything">던파(임의로 열기)</a><br>
+    <a href="Day_0201_entity.html" target="anything">entity로 이동</a><br>
+    <a href="../Day_0508/Day_01_Ramen.html" target="anything">라면으로 이동</a><br>
+
+    <br>
+    <img src="phantom.jpg" alt="팬텀">
+
+    <br>
+    <p id="symbol">스페이드</p>
+    <a href="#top">
+        <img src="9041519_suit_spade_fill_icon.png" alt="스페이드">
+    </a>
+    <br>
+    <a href="#top">상단으로 이동</a>
+
+</body>
+
+</html>

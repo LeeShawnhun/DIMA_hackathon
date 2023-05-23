@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script defer src="./script/counting.js"></script>
+
+    <style>
+        .title{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border: 1px solid #ccc;
+            width: 250px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 글자 수 세어주는 프로그램
+        text area 텍스트 입력, 1000자 제한
+        div result: 글자 수 출력
+    -->
+    <div id="container">
+        <div id="textarea">
+            <label>
+                <!-- <input type="text" id="text"> -->
+                <textarea name="text" id="text`" cols="30" rows="10" onkeyup="check_length(this)"></textarea>
+            </label>
+
+        </div>
+
+        <h2 class="title">글자 수 결과</h2>
+
+        <div id="result"></div>
+    </div>
+
+</body>
+
+</html>

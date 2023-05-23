@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>화살표함수 사용하기</h2>
+    <p>
+        * 화살표함수는 ES6에서 추가된 문법이다. <br>
+        * arguments, this를 사용할 수 없다. <br>
+        * call, apply, bind를 사용할 수 없다.
+    </p>
+    <script>
+        // 함수 이름 = (전달인자) => {실행결과};
+        let func1 = () => { console.log('화살표함수'); return 12 * 4; };
+
+        let temp1 = func1(); // 함수 선언 및 반환값 설정
+        console.log(temp1); // 반환값 출력
+        console.log(typeof func1); // function
+
+        // 실행문{}에 return 없이 숫자만 넣으면 제대로 출력 안됨
+        // 숫자만 출력하고 싶으면 {} 없애기
+        let func2 = () => { 12 * 4 };
+
+        let temp2 = func2();
+        console.log(temp2); // undefined
+
+        let func3 = () => 12 * 4;
+
+        let temp3 = func3();
+        console.log(temp3); // undefined
+
+        // 전달인자
+        let func4 = (a, b) => a + b;
+
+        let temp4 = func4(12, 4);
+        console.log(temp4); // undefined
+
+        // 전달인자가 하나인 경우 괄호 생략가능
+        // 전달인자가 없어도 생략할 수 없음
+        let func5 = a => a + 2;
+
+        let temp5 = func5(12);
+        console.log(temp5); // undefined
+
+
+    </script>
+
+</body>
+
+</html>

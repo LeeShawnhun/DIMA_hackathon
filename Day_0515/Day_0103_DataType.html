@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+
+<body>
+    <h1 class="world">Hello, World!</h1>
+    <h1 id="hello">Hello, <span style="color: red;">World!</span></h1>
+    <h1 class="world">Hello, World!</h1>
+    <h2 id="myh2"></h2>
+    
+
+    <script>
+        // 요소 전체 가져오기 (ID 기준)
+        let hello = document.getElementById("hello");
+        console.log(hello);
+
+        // 요소 없이 글자만 기져오기
+        let helloData = hello.innerText;
+        console.log(helloData);
+        
+        // 태그 가져오기
+        let helloTag = hello.innerHTML;
+        console.log(helloTag);
+
+        // write하기
+        let data = '오늘은 <span style="color:\'blue\';">월요일</span>입니다.';
+        let myh2 = document.getElementById("myh2");
+        // myh2.innerText = data; // 문자열 안에 포함된 태그를 해석하지 않음
+        myh2.innerHTML = data; // 문자열 안에 포함된 태그를 해석함 (스타일 제외)
+        // escape key를 빼면 바로 인식됨
+
+       let clsName = document.getElementsByClassName("world");
+       console.log(typeof clsName); // 객체(배열)
+       console.log(clsName.length);
+       console.log(clsName[0]);
+
+       let tags = document.getElementsByTagName("h1");
+       console.log(typeof tags);
+       console.log(tags.length);
+       console.log(tags[0]);
+    </script>
+</body>
+
+</html>

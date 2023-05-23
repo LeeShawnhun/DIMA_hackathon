@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // JS의 데이터 종류
+        // 1) Primitive 타입: number, boolean
+        // 2) Reference 타입: string, object(배열, 객체)
+        function myFunc() {
+            return 10 + 20;
+        }
+        console.log(typeof myFunc);
+
+        // 1) [], {}
+        let ary = [2, 4, 6, 8, 10];
+        let total1 = 0;
+
+        // for문 1번
+        for (let i = 0; i < ary.length; ++i) {
+            total1 += ary[i];
+        }
+        console.log(`합계: ${total1}`);
+
+        // for문 2번
+        let total2 = 0;
+        for (let i in ary) { // i는 첨자를 의미
+            total2 += ary[i];
+        }
+        console.log(`합계: ${total2}`);
+
+        // for문 3번
+        let total3 = 0;
+        for (let data of ary) { // data는 데이터를 의미함
+            total3 += data;
+        }
+        console.log(`합계: ${total3}`);
+
+        let ary1 = ['자바', 'db', ['HTML', 'CSS', 'JavaScript']];
+        let java = ary1[0];
+        console.log(java);
+        let db = ary1[1];
+        console.log(db);
+        let HTML = ary1[2][0];
+        console.log(typeof web);
+
+        // array안의 데이터를 한번에 꺼내는 방법
+        let [h, c, j] = ary1[2];
+        console.log(h, c, j);
+
+        // object: 따옴표 없이 그냥 묶을 수 있음1
+        let obj = { name: '홍길동', age: 25, gender: '남자' };
+        console.log(obj['name']); // 대괄호로 꺼내기
+        console.log(obj.age);     // .key 이름으로 꺼내기
+        console.log(obj['gender']);
+
+        // json: key가 쌍따옴표로 묶여 있음
+        let json = { "name": '홍길동', "age": 25, "gender": '남자' };
+        console.log(json['name']); // 대괄호로 꺼내기
+        console.log(json.age);     // .key 이름으로 꺼내기
+        console.log(json['gender']);
+
+
+// 2) HTML 객체
+
+    </script>
+
+</body>
+
+</html>

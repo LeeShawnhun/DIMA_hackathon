@@ -1,0 +1,71 @@
+body {
+        background-color: rgb(243, 255, 255);
+}
+
+.wrapper {
+    width: 750px;
+    height: 500px;
+    margin: 0 auto;
+    border: 1px none #ccc;
+    text-align: center;
+
+}
+
+#title {
+    background-color: black;
+    color: white;
+    height: 50px;
+    padding-top: 8px;
+    font-size: 30px;
+}
+
+ol {
+    text-align: center;
+
+}
+
+ol>li {
+    margin-bottom: 10px;
+    text-align: left;
+    width: 500px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+ol>li>span {
+    display: inline-block;
+    width: 150px;
+}
+
+input[type="text"] {
+    text-align: right;
+}
+
+input[type="button"] {
+    text-align: center;
+    width: 200px;
+    height: 40px;
+    background: linear-gradient(90deg, skyblue 10%, darkblue 100%);
+    border-radius: 25px;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    font-size: 14px;
+    font-family: 'Wix Madefor Text', sans-serif;
+    font-weight: bolder;
+    color: white;
+}
+
+input[type="button"]:hover {
+    box-shadow: 2px 2px 5px 0px gray;
+}
+
+div>div>h2 {
+    display: inline-block;
+    text-shadow: 3px 3px 3px #ccc;
+}
+
+.result {
+    background-color: yellow;
+}
